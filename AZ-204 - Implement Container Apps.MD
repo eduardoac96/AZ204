@@ -2,18 +2,18 @@
 ## Prerequisito: Generar imagen de Docker
 
 ### Click derecho en tu proyecto en Visual Studio > Add > Docker Support
-![alt text](image-2.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-2.png)
 
-![alt text](image-8.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-8.png)
 ### Dockerfile generado
-![alt text](image-15.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-15.png)
 
 
 ## Paso 1: Construir la Imagen de Docker
 
 ```docker build -t miproyecto:v1 .```
 
-![alt text](image-4.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-4.png)
 
 -t es para determinar el nombre de la imagen docker seguido de un tag, en este ejemplo es v1
  .  Determina el Directorio actual
@@ -22,12 +22,13 @@
 
 ```docker images```
 
-![alt text](image-11.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-11.png)
 
 ### Ejecutar/crear un contenedor
 ```docker run -d -p 5050:8080 miproyecto:v1```
 
-![alt text](image-17.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-17.png)
+
 -d: Detached, establece que el contenedor se ejecutara en segundo plano
 
 -p: Port Mapping, determina el puerto de la maquina que ejecuta el contenedor (en este caso 5050 con uno de los puertos del cual el contenedor esta escuchando (8080)
@@ -58,10 +59,11 @@
 
 ### 4. Compilar un Docker file y push a ACR:
 ```docker push miproyectoacr.azurecr.io/miproyecto:v1```
-![alt text](image-20.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-20.png)
 ### 5. Ver las imágenes en ACR:
 ```az acr repository list --name miproyectoacr```
-![alt text](image-21.png)
+
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-21.png)
 
 ## Paso 3. Azure Container Apps
 ### 1. Instalar la extension de Container Apps para CLI
@@ -87,12 +89,12 @@
 ```az containerapp show --name hello-app --resource-group rg-accenture-east-us-96 --query properties.configuration.ingress.fqdn```
 
 ```az containerapp show --name miproyecto-app --resource-group rg-accenture-east-us-96 --query properties.configuration.ingress.fqdn```
- ![alt text](image-23.png) 
+ ![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-23.png) 
 
 ## Resultado
-![alt text](image-24.png)
-![alt text](image-25.png)
-![alt text](image-26.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-24.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-25.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-26.png)
 
 ## Paso 6. Eliminar recursos de Azure
 #### Por efectos de prueba y no incurrir en costos extras de Azure, procedemos a eliminar el recurso de Container Instances (o detenerlo si lo deseas).

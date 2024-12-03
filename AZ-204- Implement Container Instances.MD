@@ -2,17 +2,17 @@
 ## Prerequisito: Generar imagen de Docker
 
 ### Click derecho en tu proyecto en Visual Studio > Add > Docker Support
-![alt text](image-2.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-2.png)
 
-![alt text](image-7.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-7.png)
 ### Dockerfile generado
-![alt text](image-16.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-16.png)
 
 ## Paso 1: Construir la Imagen de Docker
 
 ```docker build -t miproyecto:v1 .```
 
-![alt text](image-3.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-3.png)
 
 -t es para determinar el nombre de la imagen docker seguido de un tag, en este ejemplo es v1
  .  Determina el Directorio actual
@@ -21,12 +21,12 @@
 
 ```docker images```
 
-![alt text](image-12.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-12.png)
 
 ### Ejecutar/crear un contenedor
 ```docker run -d -p 5050:8080 miproyecto:v1```
 
-![alt text](image-18.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-18.png)
 
 -d: Detached, establece que el contenedor se ejecutara en segundo plano
 
@@ -59,10 +59,11 @@
 ### 4. Compilar un Docker file y push a ACR:
 ```docker push miproyectoacr.azurecr.io/miproyecto:v1```
 
-![alt text](image-19.png)
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-19.png)
 ### 5. Ver las imágenes en ACR:
 ```az acr repository list --name miproyectoacr```
-![alt text](image-22.png)
+
+![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-22.png)
 
 ## Paso 3. Azure Container Instances
 
@@ -74,7 +75,7 @@
 ```az container create --resource-group rg-accenture-east-us-96 --name mi-app-contenedor-6000 --image mcr.microsoft.com/k8se/quickstart:latest --ip-address public --dns-name-label acn-demo24 --ports 80 --cpu 1 --memory 1 ```
  
 ```az container show --resource-group rg-accenture-east-us-96 --name mi-app-contenedor-6000 --query "{FQDN:ipAddress.fqdn,ProvisioningState:provisioningState}" --out table```
- ![alt text](image-28.png)![alt text](image-27.png)
+ ![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-28.png)![alt text](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image-27.png)
 ## Paso 4. Eliminar recursos de Azure
 #### Por efectos de prueba y no incurrir en costos extras de Azure, procedemos a eliminar el recurso de Container Instances (o detenerlo si lo deseas).
 

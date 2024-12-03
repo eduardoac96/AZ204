@@ -18,7 +18,9 @@ Accede a [https://portal.azure.com](https://portal.azure.com).
   - **Tipos de cuentas admitidos**: Selecciona **Cuentas solo en este directorio organizacional**.
   - **URI de redirección (opcional)**: Selecciona **Cliente público/nativo (móvil y escritorio)** e ingresa `http://localhost` en el cuadro de texto.
 - Haz clic en **Registrar**.
-![alt text](image.png)
+
+![AppRegistration](https://raw.githubusercontent.com/eduardoac96/AZ204/main/images/image.png)
+
 #### 1.4 Copiar las credenciales necesarias
 - **ID de la aplicación (cliente)**: Se asignará automáticamente a tu aplicación.
 - **ID de directorio (tenant)**: Lo encontrarás en el panel de tu aplicación registrada.
